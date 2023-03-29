@@ -33,7 +33,7 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
-
+logger($request->has('app') ? 'yes' : 'no');
         return redirect()->intended(RouteServiceProvider::HOME);
     }
 
