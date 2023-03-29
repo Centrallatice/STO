@@ -9,6 +9,15 @@ Via window powershell : executer dans le dossier du projet npm run dev
 ## Exécuter les commandes artisans 
 sail shell puis artisan migrate OU sail artisan migrate
 
+## Vider le cache
+sail artisan optimize
+
+## Installer les permissions et rôles de base 
+sail artisan db:seed --class=PermissionTableSeeder
+sail artisan db:seed --class=CreateAdminUserSeeder
+
+Par défaut les accès sont sto
+
 ## Documentations :
 
 - Inertia : https://laravel.com/docs/9.x/starter-kits#breeze-and-inertia
